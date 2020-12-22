@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+html,
+body,
+#root,
+.home,
+.modal {
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.btn-a,
+.btn-b,
+.btn-c {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0 5px;
+  display: inline-block;
+}
+.modal {
+  background-color: rgba(0,0,0,0.5);
+}
+.btn-a {
+  background-color: #46139f;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-b {
+  background-color: #ff7f50;
+  color: white;
+}
+.btn-c {
+  background-color: white;
+  color: #46139f;
+  border-radius: 1px solid #46139f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  height: 80vh;
+  width: 800px;
+  max-width: 100%;
+  padding: 15px;
+  position: relative;
+}
+.modal-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.modal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.modal-content.detail {
+  align-items: center;
+}
+.modal-content.detail p {
+  margin: 10px 0;
+}
+.contact-list {
+  border: 1px solid #e5e5e5;
+  padding: 0 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.contact-info p {
+  font-size: 14px;
+  margin: 0;
+}
+.search-box {
+  width: calc(100% - 24px);
+  padding: 10px;
+  margin: 0;
+}
+.contact-title {
+  font-size: 20px;
+}
+.btn-close-detail {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  font-size: 30px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.even-check {
+  margin-right: 10px;
 }
